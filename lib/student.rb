@@ -33,7 +33,7 @@ class Student
     SQL
     
     DB[:conn].execute(sql,self.name, self.grade)
-    self.id = "SELECT last_"
+    self.id = "SELECT last_insert_rowid "
   end
   
 end
