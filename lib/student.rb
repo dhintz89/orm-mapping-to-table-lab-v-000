@@ -5,7 +5,7 @@ class Student
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]  
   
-  def initialize(:name, :grade, id: nil)
+  def initialize(name:, grade:, id: nil)
     @name = name
     @grade = grade
     @id = id
@@ -27,7 +27,7 @@ class Student
     DB[:conn].execute(sql)
   end
   
-  def self.create(:name, :grade)
+  def self.create(name:, grade:)
     student = Student.new(name, grade)
     student.save
     student
